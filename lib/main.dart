@@ -6,7 +6,6 @@ import 'package:diet_app/ui/pages/onboarding_page_4.dart';
 import 'package:diet_app/ui/pages/onboarding_page_5.dart';
 import 'package:diet_app/ui/pages/sign_in_page.dart';
 import 'package:diet_app/ui/pages/sign_up_page.dart';
-import 'package:diet_app/ui/pages/sign_up_set_profile_page.dart';
 import 'package:diet_app/ui/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +26,6 @@ class MyApp extends StatelessWidget {
         '/onboarding': (context) => const OnboardingPage(),
         '/sign-in': (context) => const SignInPage(),
         '/sign-up': (context) => const SignUpPage(),
-        '/sign-up-set-profile': (context) => const SignUpSetProfilePage(),
         '/onboarding-page-2': (context) => const OnboardingPage2(),
         '/onboarding-page-3': (context) => const OnboardingPage3(),
         '/onboarding-page-4': (context) => const OnboardingPage4(),

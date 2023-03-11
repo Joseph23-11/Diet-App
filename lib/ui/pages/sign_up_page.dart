@@ -72,7 +72,7 @@ class SignUpPage extends StatelessWidget {
                 CustomFilledButton(
                   title: "Berikutnya",
                   onPressed: () {
-                    Navigator.pushNamed(context, '/sign-up-set-profile');
+                    Navigator.pushNamed(context, '/onboarding-page-2');
                   },
                 ),
               ],
