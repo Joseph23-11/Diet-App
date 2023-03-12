@@ -47,7 +47,7 @@ class SignUpPage extends StatelessWidget {
               children: [
                 // NOTE: FULL NAME INPUT
                 CustomFormField(
-                  title: 'Full Name',
+                  title: 'Username',
                 ),
                 const SizedBox(
                   height: 16,

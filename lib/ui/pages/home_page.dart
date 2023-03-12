@@ -105,7 +105,7 @@ class HomePage extends StatelessWidget {
                 height: 2,
               ),
               Text(
-                'Joseph',
+                'joseph',
                 style: blackTextStyle.copyWith(
                   fontSize: 20,
                   fontWeight: semiBold,

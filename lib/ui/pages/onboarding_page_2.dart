@@ -1,11 +1,15 @@
-import 'package:diet_app/shared/theme.dart';
+import 'package:diet_app/ui/widgets/package_gender.dart';
 import 'package:flutter/material.dart';
-
+import '../../shared/theme.dart';
 import '../widgets/button.dart';
 import '../widgets/form.dart';
 
-class OnboardingPage2 extends StatelessWidget {
-  const OnboardingPage2({super.key});
+class OnboardingPage3 extends StatelessWidget {
+  final bool isSelected;
+  const OnboardingPage3({
+    Key? key,
+    this.isSelected = false,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +23,7 @@ class OnboardingPage2 extends StatelessWidget {
           color: blackColor,
         ),
         title: Text(
-          'Masukkan Data',
+          'Cek Kebutuhan Kalori',
           style: blackTextStyle.copyWith(
             fontSize: 20,
             fontWeight: semiBold,
@@ -29,10 +33,12 @@ class OnboardingPage2 extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.only(
           top: 72,
+          left: 24,
+          right: 24,
         ),
         children: [
           Text(
-            'Masukkan nama anda',
+            'Masukkan data anda',
             style: blackTextStyle.copyWith(
               fontSize: 20,
               fontWeight: semiBold,
@@ -40,23 +46,65 @@ class OnboardingPage2 extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(
-            height: 6,
+            height: 30,
           ),
           Container(
-            padding: EdgeInsets.all(44),
+            padding: EdgeInsets.all(22),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: lightBackgroundColor,
+              color: whiteColor,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // NOTE: FULL NAME INPUT
-                CustomFormField(
-                  title: '',
+                // NOTE: JENIS KELAMIN
+                Text(
+                  'Jenis Kelamin',
+                  style: blackTextStyle.copyWith(
+                    fontWeight: medium,
+                  ),
                 ),
                 const SizedBox(
-                  height: 310,
+                  height: 12,
+                ),
+                Wrap(
+                  spacing: 24,
+                  runSpacing: 17,
+                  children: const [
+                    PackageGender(
+                      title: 'Pria',
+                      isSelected: true,
+                    ),
+                    PackageGender(
+                      title: 'Wanita',
+                      isSelected: false,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                // NOTE: BERAT BADAN
+                CustomFormField(
+                  title: 'Berat Badan (kg)',
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                // NOTE: TINGGI BADAN
+                CustomFormField(
+                  title: 'Tinggi Badan (cm)',
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                // NOTE: USIA
+                CustomFormField(
+                  title: 'Usia (tahun)',
+                ),
+
+                const SizedBox(
+                  height: 30,
                 ),
                 CustomFilledButton(
                   title: "Berikutnya",

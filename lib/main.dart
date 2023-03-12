@@ -3,7 +3,6 @@ import 'package:diet_app/ui/pages/onboarding_page.dart';
 import 'package:diet_app/ui/pages/onboarding_page_2.dart';
 import 'package:diet_app/ui/pages/onboarding_page_3.dart';
 import 'package:diet_app/ui/pages/onboarding_page_4.dart';
-import 'package:diet_app/ui/pages/onboarding_page_5.dart';
 import 'package:diet_app/ui/pages/sign_in_page.dart';
 import 'package:diet_app/ui/pages/sign_up_page.dart';
 import 'package:diet_app/ui/pages/splash_page.dart';
@@ -26,10 +25,9 @@ class MyApp extends StatelessWidget {
         '/onboarding': (context) => const OnboardingPage(),
         '/sign-in': (context) => const SignInPage(),
         '/sign-up': (context) => const SignUpPage(),
-        '/onboarding-page-2': (context) => const OnboardingPage2(),
-        '/onboarding-page-3': (context) => const OnboardingPage3(),
-        '/onboarding-page-4': (context) => const OnboardingPage4(),
-        '/onboarding-page-5': (context) => const OnboardingPage5(),
+        '/onboarding-page-2': (context) => const OnboardingPage3(),
+        '/onboarding-page-3': (context) => const OnboardingPage4(),
+        '/onboarding-page-4': (context) => const OnboardingPage5(),
         '/home-page': (context) => const HomePage(),
       },
     );

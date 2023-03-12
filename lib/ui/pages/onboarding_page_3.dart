@@ -1,20 +1,15 @@
-import 'package:diet_app/ui/widgets/package_gender.dart';
+import 'package:diet_app/shared/theme.dart';
+import 'package:diet_app/ui/widgets/package_aktifitas.dart';
 import 'package:flutter/material.dart';
-import '../../shared/theme.dart';
-import '../widgets/button.dart';
-import '../widgets/form.dart';
 
-class OnboardingPage3 extends StatelessWidget {
-  final bool isSelected;
-  const OnboardingPage3({
-    Key? key,
-    this.isSelected = false,
-  }) : super(key: key);
+import '../widgets/button.dart';
+
+class OnboardingPage4 extends StatelessWidget {
+  const OnboardingPage4({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lightBackgroundColor,
       appBar: AppBar(
         backgroundColor: lightBackgroundColor,
         elevation: 0,
@@ -23,7 +18,7 @@ class OnboardingPage3 extends StatelessWidget {
           color: blackColor,
         ),
         title: Text(
-          'Cek Kebutuhan Kalori',
+          'Cek Aktifitas Fisik',
           style: blackTextStyle.copyWith(
             fontSize: 20,
             fontWeight: semiBold,
@@ -38,7 +33,7 @@ class OnboardingPage3 extends StatelessWidget {
         ),
         children: [
           Text(
-            'Masukkan data anda',
+            'Level aktifitas anda',
             style: blackTextStyle.copyWith(
               fontSize: 20,
               fontWeight: semiBold,
@@ -49,7 +44,7 @@ class OnboardingPage3 extends StatelessWidget {
             height: 30,
           ),
           Container(
-            padding: EdgeInsets.all(22),
+            padding: EdgeInsets.all(14),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: whiteColor,
@@ -57,55 +52,35 @@ class OnboardingPage3 extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // NOTE: JENIS KELAMIN
-                Text(
-                  'Jenis Kelamin',
-                  style: blackTextStyle.copyWith(
-                    fontWeight: medium,
-                  ),
-                ),
                 const SizedBox(
-                  height: 12,
+                  height: 70,
                 ),
                 Wrap(
-                  spacing: 24,
+                  spacing: 37,
                   runSpacing: 17,
                   children: const [
-                    PackageGender(
-                      title: 'Pria',
+                    PackageAktifitas(
+                      title: 'Tidak aktif',
                       isSelected: true,
                     ),
-                    PackageGender(
-                      title: 'Wanita',
+                    PackageAktifitas(
+                      title: 'Cukup Aktif, berolahraga 1-2 kali/minggu',
+                      isSelected: false,
+                    ),
+                    PackageAktifitas(
+                      title: 'Aktif, berolahraga 3-5 kali/minggu',
+                      isSelected: false,
+                    ),
+                    PackageAktifitas(
+                      title: 'Sangat Aktif, berolahraga 6-7 kali/minggu',
                       isSelected: false,
                     ),
                   ],
                 ),
                 const SizedBox(
-                  height: 16,
+                  height: 94,
                 ),
-                // NOTE: BERAT BADAN
-                CustomFormField(
-                  title: 'Berat Badan (kg)',
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                // NOTE: TINGGI BADAN
-                CustomFormField(
-                  title: 'Tinggi Badan (cm)',
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                // NOTE: USIA
-                CustomFormField(
-                  title: 'Usia (tahun)',
-                ),
-
-                const SizedBox(
-                  height: 30,
-                ),
+                Container(),
                 CustomFilledButton(
                   title: "Berikutnya",
                   onPressed: () {
